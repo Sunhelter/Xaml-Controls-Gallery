@@ -107,7 +107,7 @@
                     x:Name="controlsSearchBox"
                     VerticalAlignment="Center"
                     x:FieldModifier="public"
-                    PlaceholderText="Search"
+                    PlaceholderText="搜索"
                     QueryIcon="Find"
                     QuerySubmitted="OnControlsSearchBoxQuerySubmitted"
                     MinWidth="200"

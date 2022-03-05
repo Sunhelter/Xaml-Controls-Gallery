@@ -2,7 +2,7 @@
   "Groups": [
     {
       "UniqueId": "NewControls",
-      "Title": "What's New",
+      "Title": "新增功能",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -10,7 +10,7 @@
     },
     {
       "UniqueId": "AllControls",
-      "Title": "All controls",
+      "Title": "所有控件",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -18,7 +18,7 @@
     },
     {
       "UniqueId": "MenusAndToolbars",
-      "Title": "Menus and Toolbars",
+      "Title": "菜单和工具栏",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -26,14 +26,14 @@
         {
           "UniqueId": "XamlUICommand",
           "Title": "XamlUICommand",
-          "Subtitle": "An object which is used to define the look and feel of a given command.",
+          "Subtitle": "用于定义交互 UI 元素的命令行为，该元素在调用时执行操作（例如发送电子邮件、删除项目或提交表单）。",
           "ImagePath": "ms-appx:///Assets/AppBarSeparator.png",
-          "Description": "An object which is used to define the look and feel of a given command, which can be reused across your app, and which is understood natively by the standard XAML controls.",
+          "Description": "XamlUICommand 可以让你通过图标、标签、说明、键盘快捷方式（访问键和键盘快捷键）之类的控件绑定来指定 UI，不需设置单独的属性。",
           "Content": "",
           "IsNew": false,
           "Docs": [
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/commanding#command-experiences-using-the-xamluicommand-class"
             },
             {
@@ -43,22 +43,22 @@
           ],
           "RelatedControls": [
             "StandardUICommand",
-            "AppBarButton",
-            "AppBarToggleButton",
-            "CommandBar"
+            "应用栏按钮",
+            "应用栏切换按钮",
+            "命令栏"
           ]
         },
         {
           "UniqueId": "StandardUICommand",
           "Title": "StandardUICommand",
-          "Subtitle": "A StandardUICommand is a built-in 'XamlUICommand' which represents a commonly used command, e.g. 'Save'.",
+          "Subtitle": "派生自XamlUiCommand，会公开一组带预定义属性（例如图标、键盘快捷方式、说明）的标准平台命令。",
           "ImagePath": "ms-appx:///Assets/AppBarSeparator.png",
-          "Description": "StandardUICommands are a set of built-in XamlUICommands represeting commonly used commands. Including the look and feel of a given command, which can be reused across your app, and which is understood natively by the standard XAML controls. E.g. Save, Open, Copy, Paste, etc.",
+          "Description": "StandardUICommands派生自XamlUICommands，是一组常用命令，包括给定命令的外观，它可以在你的应用程序中重复使用，并且可以被标准 XAML 控件本机理解。 例如。 保存、打开、复制、粘贴等。",
           "Content": "",
           "IsNew": false,
           "Docs": [
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/commanding#command-experiences-using-the-standarduicommand-class"
             },
             {
@@ -68,18 +68,18 @@
           ],
           "RelatedControls": [
             "XamlUICommand",
-            "AppBarButton",
-            "AppBarToggleButton",
-            "CommandBar"
+            "应用栏按钮",
+            "应用栏切换按钮",
+            "命令栏"
           ]
         },
         {
           "UniqueId": "AppBarButton",
-          "Title": "AppBarButton",
-          "Subtitle": "A button that's styled for use in a CommandBar.",
+          "Title": "应用栏按钮",
+          "Subtitle": "在命令栏中使用的按钮。",
           "ImagePath": "ms-appx:///Assets/AppBarButton.png",
-          "Description": "App bar buttons differ from standard buttons in several ways:\n- Their default appearance is a transparent background with a smaller size.\n- You use the Label and Icon properties to set the content instead of the Content property. The Content property is ignored.\n- The button's IsCompact property controls its size.",
-          "Content": "<p>You can open the app bar and toggle the IsCompact button to see how the app bar buttons on this page change.</p><p>Use the <b>Label</b> and <b>Icon</b> properties to define the content of the app bar buttons. Set the <b>Label</b> property to a string to specify the text label. The label is shown by default but is hidden when the button is in its compact state, so you also need to specify a meaningful icon. To do that, set the button's <b>Icon</b> property to an element derived from the <b>IconElement</b> class. Four kinds of icon elements are provided:</p><p><b>FontIcon</b> - The icon is based on a glyph from the specified font family.</p><p><b>BitmapIcon</b> - The icon is based on a bitmap image file with the specified Uri.</p><p><b>PathIcon</b> - The icon is based on Path data.</p><p><b>SymbolIcon</b> - The icon is based on a predefined list of glyphs from the Segoe UI Symbol font.</p><p>Look at the <i>AppBarButtonPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
+          "Description": "应用栏按钮与标准按钮有几个不同：\n- 它们的默认外观是具有较小尺寸的透明背景，\n- 使用Label和Icon属性来设置内容，而不是Content属性。Content属性将被忽略。\n- 由IsCompact属性控制其大小。",
+          "Content": "<p>您可以打开应用栏并切换 IsCompact 按钮以查看此页面上的应用栏按钮如何变化。</p><p>使用<b>Label</b>和<b>Icon</b>属性定义应用栏按钮的内容。设置<b>Label</b>属性的字符串来显示标签文本。标签默认显示，但在按钮处于紧凑状态时隐藏，因此您还需要指定一个有意义的图标。因此请将按钮的<b>Icon</b>属性设置为派生自<b>IconElement</b>的元素。提供了四种图标元素：</p><p><b>FontIcon</b> - 图标基于指定字体系列的字形。</p><p><b>BitmapIcon</p> b> - 图标基于具有指定 Uri 的位图图像文件。</p><p><b>PathIcon</b> - 图标基于路径数据。</p><p><b >SymbolIcon</b> - 该图标基于 Segoe UI Symbol 字体的预定义字形列表。</p><p>查看 Visual Studio 中的 <i>AppBarButtonPage.xaml</i> 文件以了解 此页面的完整代码。</p> ",
           "IsNew": false,
           "IsUpdated": true,
           "Docs": [
@@ -104,11 +104,11 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/controls-and-patterns/app-bars"
             }
           ],
-          "RelatedControls": [ "AppBarToggleButton", "AppBarSeparator", "CommandBar" ]
+          "RelatedControls": [ "AppBarToggleButton", "AppBarSeparator", "命令栏" ]
         },
         {
           "UniqueId": "AppBarSeparator",
@@ -125,14 +125,14 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.appbarseparator"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/controls-and-patterns/app-bars"
             }
           ],
           "RelatedControls": [
             "AppBarButton",
             "AppBarToggleButton",
-            "CommandBar"
+            "命令栏"
           ]
         },
         {
@@ -166,19 +166,19 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pathicon"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/controls-and-patterns/app-bars"
             }
           ],
           "RelatedControls": [
             "AppBarButton",
             "AppBarSeparator",
-            "CommandBar"
+            "命令栏"
           ]
         },
         {
-          "UniqueId": "CommandBar",
-          "Title": "CommandBar",
+          "UniqueId": "命令栏",
+          "Title": "命令栏",
           "Subtitle": "A toolbar for displaying application-specific commands that handles layout and resizing of its contents.",
           "ImagePath": "ms-appx:///Assets/CommandBar.png",
           "Description": "The CommandBar simplifies the creation of basic app bars by providing:\n- Automatic layout of commands, with primary commands on the right and secondary commands on the left.\n- Automatic resizing of app bar commands when the app size changes.\nWhen you need an app bar that contains only AppBarButton,AppBarToggleButton , and AppBarSeparator controls, use a CommandBar. If you need more complex content, such as images, progress bars, or text blocks, use an AppBar control.",
@@ -191,7 +191,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbar"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/controls-and-patterns/app-bars"
             }
           ],
@@ -215,12 +215,12 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.MenuBar"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus"
             }
           ],
           "RelatedControls": [
-            "CommandBar",
+            "命令栏",
             "MenuFlyout",
             "StandardUICommand",
             "XamlUICommand"
@@ -241,12 +241,12 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.commandbarflyout"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/command-bar-flyout"
             }
           ],
           "RelatedControls": [
-            "CommandBar",
+            "命令栏",
             "MenuFlyout",
             "RichEditBox",
             "TextBox",
@@ -281,7 +281,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglemenuflyoutitem"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/menus"
             }
           ],
@@ -310,7 +310,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.swipeitems"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/swipe"
             },
             {
@@ -328,7 +328,7 @@
     },
     {
       "UniqueId": "Collections",
-      "Title": "Collections",
+      "Title": "集合",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -347,7 +347,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flipview"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/flipview"
             }
           ],
@@ -372,7 +372,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.gridview"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/lists"
             }
           ],
@@ -422,7 +422,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.listview"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/listview-and-gridview"
             },
             {
@@ -474,7 +474,7 @@
             },
             {
 
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pull-to-refresh"
             }
           ]
@@ -493,7 +493,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.TreeView"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tree-view"
             }
           ]
@@ -512,7 +512,7 @@
               "Uri": "https://aka.ms/win10datagridapidoc"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://aka.ms/win10datagriddoc"
             },
             {
@@ -529,7 +529,7 @@
     },
     {
       "UniqueId": "DateAndTime",
-      "Title": "Date and Time",
+      "Title": "日期和时间",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -548,7 +548,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendardatepicker"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/calendar-date-picker"
             }
           ],
@@ -571,7 +571,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.calendarview"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/calendar-view"
             }
           ],
@@ -595,7 +595,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.datepicker"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/date-picker"
             }
           ],
@@ -619,7 +619,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.timepicker"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/time-picker"
             }
           ],
@@ -632,14 +632,14 @@
     },
     {
       "UniqueId": "BasicInput",
-      "Title": "Basic Input",
+      "Title": "基本输入",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
       "Items": [
         {
           "UniqueId": "Button",
-          "Title": "Button",
+          "Title": "按钮控件",
           "Subtitle": "A control that responds to user input and raises a Click event.",
           "ImagePath": "ms-appx:///Assets/Button.png",
           "Description": "The Button control provides a Click event to respond to user input from a touch, mouse, keyboard, stylus, or other input device. You can put different kinds of content in a button, such as text or an image, or you can restyle a button to give it a new look.",
@@ -651,7 +651,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.button"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons"
             }
           ],
@@ -664,8 +664,8 @@
         },
         {
           "UniqueId": "DropDownButton",
-          "Title": "DropDownButton",
-          "Subtitle": "A button that displays a flyout of choices when clicked.",
+          "Title": "下拉按钮",
+          "Subtitle": "单击时显示选项浮出控件的按钮",
           "ImagePath": "ms-appx:///Assets/DropDownButton.png",
           "Description": "A control that drops down a flyout of choices from which one can be chosen.",
           "Content": "",
@@ -677,7 +677,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.dropdownbutton"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons"
             }
           ],
@@ -688,12 +688,12 @@
             "RepeatButton",
             "HyperlinkButton",
             "AppBarButton",
-            "CommandBar"
+            "命令栏"
           ]
         },
         {
           "UniqueId": "HyperlinkButton",
-          "Title": "HyperlinkButton",
+          "Title": "超链接按钮",
           "Subtitle": "A button that appears as hyperlink text, and can navigate to a URI or handle a Click event.",
           "ImagePath": "ms-appx:///Assets/HyperlinkButton.png",
           "Description": "A HyperlinkButton appears as a text hyperlink. When a user clicks it, it opens the page you specify in the NavigateUri property in the default browser. Or you can handle its Click event, typically to navigate within your app.",
@@ -706,7 +706,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.hyperlinkbutton"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/hyperlinks"
             }
           ],
@@ -719,10 +719,10 @@
         },
         {
           "UniqueId": "RepeatButton",
-          "Title": "RepeatButton",
-          "Subtitle": "A button that raises its Click event repeatedly from the time it's pressed until it's released.",
+          "Title": "重复按钮",
+          "Subtitle": "长按时可重复触发点击事件的按钮",
           "ImagePath": "ms-appx:///Assets/Button.png",
-          "Description": "The RepeatButton control is like a standard Button, except that the Click event occurs continuously while the user presses the RepeatButton.",
+          "Description": "重复按钮和标准按钮基本一样，只不过长按时会重复触发点击事件。",
           "Content": "<p>A <b>RepeatButton</b> looks just like a regular <b>Button</b>, but it's <b>Click</b> event occurs continuously while the button is pressed.</p><p>Look at the <i>RepeatButtonPage.xaml</i> file in Visual Studio to see the full code for this page.</p>",
           "IsNew": false,
           "IsUpdated": true,
@@ -732,7 +732,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.repeatbutton"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons"
             }
           ],
@@ -745,7 +745,7 @@
         },
         {
           "UniqueId": "ToggleButton",
-          "Title": "ToggleButton",
+          "Title": "切换按钮",
           "Subtitle": "A button that can be switched between two states like a CheckBox.",
           "ImagePath": "ms-appx:///Assets/ToggleButton.png",
           "Description": "A ToggleButton looks like a Button, but works like a CheckBox. It typically has two states, checked (on) or unchecked (off), but can be indeterminate if the IsThreeState property is true. You can determine it's state by checking the IsChecked property.",
@@ -757,7 +757,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.primitives.togglebutton"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons#create-a-toggle-split-button"
             }
           ],
@@ -767,7 +767,7 @@
             "ToggleSwitch",
             "CheckBox",
             "CommandBarFlyout",
-            "CommandBar"
+            "命令栏"
           ]
         },
         {
@@ -785,18 +785,18 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitbutton"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons#create-a-split-button"
             }
           ],
           "RelatedControls": [
             "Button",
             "AppBarToggleButton",
-            "CommandBar",
+            "命令栏",
             "ToggleSwitch",
             "CheckBox",
             "CommandBarFlyout",
-            "CommandBar"
+            "命令栏"
           ]
         },
         {
@@ -814,7 +814,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.togglesplitbutton"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/buttons"
             }
           ],
@@ -824,7 +824,7 @@
             "ToggleSwitch",
             "CheckBox",
             "CommandBarFlyout",
-            "CommandBar"
+            "命令栏"
           ]
         },
         {
@@ -842,7 +842,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.checkbox"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/checkbox"
             }
           ],
@@ -866,7 +866,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.ColorPicker"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/color-picker"
             }
           ],
@@ -893,7 +893,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.comboboxitem"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/combo-box"
             }
           ],
@@ -921,7 +921,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.radiobutton"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/radio-button"
             }
           ],
@@ -946,7 +946,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.RatingControl"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/rating"
             }
           ],
@@ -970,7 +970,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.slider"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "http://docs.microsoft.com/windows/uwp/design/controls-and-patterns/slider"
             }
           ],
@@ -995,7 +995,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.toggleswitch"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/toggles"
             }
           ],
@@ -1010,7 +1010,7 @@
     },
     {
       "UniqueId": "StatusAndInfo",
-      "Title": "Status and Info",
+      "Title": "状态和信息",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -1053,7 +1053,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.infobadge"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/infobadge"
             }
           ],
@@ -1077,7 +1077,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.infobar"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/infobar"
             }
           ],
@@ -1101,7 +1101,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Microsoft.UI.Xaml.Controls.ProgressBar"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/progress-controls"
             }
           ],
@@ -1123,7 +1123,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.progressring"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/progress-controls"
             }
           ],
@@ -1146,7 +1146,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.tooltip"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tooltips"
             }
           ],
@@ -1160,7 +1160,7 @@
     },
     {
       "UniqueId": "DialogsAndFlyouts",
-      "Title": "Dialogs and Flyouts",
+      "Title": "对话框和弹出窗口",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -1180,7 +1180,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.contentdialog"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/dialogs"
             }
           ],
@@ -1206,7 +1206,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.flyout"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs"
             }
           ],
@@ -1232,7 +1232,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.teachingtip"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/dialogs-and-flyouts/teaching-tip"
             }
           ],
@@ -1246,7 +1246,7 @@
     },
     {
       "UniqueId": "Scrolling",
-      "Title": "Scrolling",
+      "Title": "滚动条",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -1266,10 +1266,10 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pipspager"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/apps/design/controls/pipspager"
             }
-            
+
           ],
           "RelatedControls": [
             "ScrollViewer",
@@ -1292,7 +1292,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.scrollviewer"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/scroll-controls"
             }
           ],
@@ -1319,7 +1319,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.semanticzoom"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/semantic-zoom"
             }
           ],
@@ -1332,7 +1332,7 @@
     },
     {
       "UniqueId": "Layout",
-      "Title": "Layout",
+      "Title": "布局",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "Use layout controls to arrange the controls and content in your app.",
@@ -1373,7 +1373,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.canvas"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/layout/layout-panels"
             }
           ],
@@ -1399,7 +1399,7 @@
               "Uri": "https://docs.microsoft.com/windows/winui/api/microsoft.ui.xaml.controls.expander"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/apps/design/controls/expander"
             }
           ],
@@ -1423,7 +1423,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.itemsrepeater?view=winui-2.2"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/items-repeater"
             },
             {
@@ -1459,7 +1459,7 @@
               "Uri": "https://docs.microsoft.com/windows/uwp/design/layout/grid-tutorial"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/layout/layout-panels#grid"
             }
           ],
@@ -1486,7 +1486,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.radiobuttons?view=winui-2.4"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/radio-button"
             }
           ],
@@ -1511,7 +1511,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.relativepanel"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/layout/layout-panels"
             }
           ],
@@ -1537,7 +1537,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.splitview"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/split-view"
             }
           ],
@@ -1563,7 +1563,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.stackpanel"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/layout/layout-panels"
             }
           ],
@@ -1589,7 +1589,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.variablesizedwrapgrid"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/layout/layout-panels"
             }
           ],
@@ -1627,7 +1627,7 @@
     },
     {
       "UniqueId": "Navigation",
-      "Title": "Navigation",
+      "Title": "导航",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -1647,7 +1647,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.breadcrumbbar"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/breadcrumbbar"
             }
           ],
@@ -1672,7 +1672,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.NavigationView"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/navigationview"
             }
           ],
@@ -1695,7 +1695,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.pivot"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/pivot"
             }
           ],
@@ -1721,7 +1721,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.tabview?view=winui-2.2"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tab-view"
             },
             {
@@ -1739,7 +1739,7 @@
     },
     {
       "UniqueId": "Media",
-      "Title": "Media",
+      "Title": "媒体",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -1789,7 +1789,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.image"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/images-imagebrushes"
             }
           ],
@@ -1816,7 +1816,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/inking-controls"
             }
           ],
@@ -1839,7 +1839,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.inktoolbar"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/inking-controls"
             }
           ],
@@ -1884,7 +1884,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.PersonPicture"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/person-picture"
             }
           ],
@@ -1906,7 +1906,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.elementsoundplayer"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/style/sound"
             }
           ]
@@ -1925,7 +1925,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.WebView"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view"
             },
             {
@@ -1941,7 +1941,7 @@
     },
     {
       "UniqueId": "Styles",
-      "Title": "Styles",
+      "Title": "样式",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -1961,7 +1961,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.acrylicbrush"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/style/acrylic"
             }
           ],
@@ -1982,7 +1982,7 @@
               "Uri": "https://www.docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.animatedicon"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/apps/design/controls/animated-icon"
             },
             {
@@ -2030,7 +2030,9 @@
             }
           ],
           "RelatedControls": [
-            "AnimatedIcon", "AppBarButton", "MenuFlyoutItem"
+            "AnimatedIcon",
+            "AppBarButton",
+            "MenuFlyoutItem"
           ]
         },
         {
@@ -2066,7 +2068,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.focusvisualkind#Windows_UI_Xaml_Application_FocusVisualKind"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/style/reveal-focus"
             }
           ],
@@ -2087,7 +2089,7 @@
               "Uri": "https://github.com/Microsoft/fluent-xaml-theme-editor"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/style/color#scoping-with-a-resourcedictionary"
             },
             {
@@ -2115,7 +2117,7 @@
     },
     {
       "UniqueId": "Text",
-      "Title": "Text",
+      "Title": "文本",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -2134,7 +2136,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.autosuggestbox"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/auto-suggest-box"
             }
           ],
@@ -2158,7 +2160,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/microsoft.ui.xaml.controls.numberbox"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/number-box"
             }
           ],
@@ -2183,7 +2185,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.passwordbox"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-controls"
             }
           ],
@@ -2209,7 +2211,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richeditbox"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-controls"
             }
           ],
@@ -2235,7 +2237,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.richtextblock"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-controls"
             }
           ],
@@ -2262,7 +2264,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textblock"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-controls"
             }
           ],
@@ -2289,7 +2291,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.controls.textbox"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/text-controls"
             }
           ],
@@ -2306,7 +2308,7 @@
     },
     {
       "UniqueId": "Motion",
-      "Title": "Motion",
+      "Title": "动效",
       "Subtitle": "",
       "ImagePath": "",
       "Description": "",
@@ -2329,7 +2331,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.media.animation.connectedanimationservice"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/motion/connected-animation"
             },
             {
@@ -2384,7 +2386,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Media.Animation.NavigationThemeTransition"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/motion/page-transitions"
             },
             {
@@ -2411,7 +2413,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transitions#Windows_UI_Xaml_UIElement_Transitions"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/motion/xaml-animation#animations-available-in-the-library"
             },
             {
@@ -2468,7 +2470,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/windows.ui.xaml.uielement.transitions#Windows_UI_Xaml_UIElement_Transitions"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/motion/motion-in-practice#implicit-animations"
             },
             {
@@ -2495,7 +2497,7 @@
               "Uri": "https://docs.microsoft.com/uwp/api/Windows.UI.Xaml.Controls.Parallaxview"
             },
             {
-              "Title": "Guidelines",
+              "Title": "文档",
               "Uri": "https://docs.microsoft.com/windows/uwp/design/motion/parallax"
             }
           ],

@@ -22,9 +22,9 @@
     mc:Ignorable="d">
 
     <!--
-        This grid acts as a root panel for the page that defines two rows:
-        * Row 0 contains the back button and page title
-        * Row 1 contains the rest of the page layout
+        使用Grid充当页面的根面板，定义为两行：
+        * Row 0 包含后退按钮和页面标题
+        * Row 1 包含剩余的页面布局
     -->
     <Grid
         x:Name="rootPanel"
@@ -159,16 +159,16 @@
                             x:Uid="SourceHeader"
                             Margin="0,0,0,12"
                             Style="{ThemeResource SubtitleTextBlockStyle}"
-                            Text="View page code on GitHub"/>
+                            Text="在GitHub上查看"/>
                         <HyperlinkButton
                             x:Name="PageMarkupGitHubLink"
                             ToolTipService.ToolTip="{x:Bind PageMarkupGitHubLink.NavigateUri, Mode=OneWay}">
-                            <TextBlock Text="XAML source code"/>
+                            <TextBlock Text="XAML 源码"/>
                         </HyperlinkButton>
                         <HyperlinkButton
                             x:Name="PageCodeGitHubLink"
                             ToolTipService.ToolTip="{x:Bind PageCodeGitHubLink.NavigateUri, Mode=OneWay}">
-                            <TextBlock Text="C# source code"/>
+                            <TextBlock Text="C# 源码"/>
                         </HyperlinkButton>
                     </StackPanel>
 

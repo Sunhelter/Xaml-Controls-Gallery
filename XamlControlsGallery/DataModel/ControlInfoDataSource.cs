@@ -1,4 +1,4 @@
-﻿//*********************************************************
+//*********************************************************
 //
 // Copyright (c) Microsoft. All rights reserved.
 // THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
@@ -17,18 +17,15 @@ using Windows.Storage;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
-// The data model defined by this file serves as a representative example of a strongly-typed
-// model.  The property names chosen coincide with data bindings in the standard item templates.
+// 此文件定义的数据模型用作强类型模型的代表性示例。 选择的属性名称与标准项目模板中的数据绑定一致。
 //
-// Applications may use this model as a starting point and build on it, or discard it entirely and
-// replace it with something appropriate to their needs. If using this model, you might improve app
-// responsiveness by initiating the data loading task in the code behind for App.xaml when the app
-// is first launched.
+// 应用程序可以使用此模型作为起点并在此基础上进行构建，或者完全放弃它并用适合其需求的东西替换它。
+// 如果使用此模型，您可以通过在首次启动应用程序时在 App.xaml 背后的代码中启动数据加载任务来提高应用程序响应能力 。
 
 namespace AppUIBasics.Data
 {
     /// <summary>
-    /// Generic item data model.
+    /// 通用项目数据模型
     /// </summary>
     public class ControlInfoDataItem
     {
@@ -80,7 +77,7 @@ namespace AppUIBasics.Data
 
 
     /// <summary>
-    /// Generic group data model.
+    /// 通用组数据模型
     /// </summary>
     public class ControlInfoDataGroup
     {

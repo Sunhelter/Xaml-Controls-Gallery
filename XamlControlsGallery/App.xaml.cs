@@ -31,10 +31,9 @@ namespace AppUIBasics
     /// </summary>
     sealed partial class App : Application
     {
-        
+
         /// <summary>
-        /// Initializes the singleton Application object.  This is the first line of authored code
-        /// executed, and as such is the logical equivalent of main() or WinMain().
+        /// 初始化单例应用对象。等同于Main函数。        
         /// </summary>
         public App()
         {
@@ -53,7 +52,7 @@ namespace AppUIBasics
         {
             ElementSoundPlayer.State = ElementSoundPlayerState.On;
 
-            if(!withSpatial)
+            if (!withSpatial)
                 ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.Off;
             else
                 ElementSoundPlayer.SpatialAudioMode = ElementSpatialAudioMode.On;
@@ -92,32 +91,20 @@ namespace AppUIBasics
         }
 
         /// <summary>
-        /// Invoked when the application is launched normally by the end user.  Other entry points
-        /// will be used such as when the application is launched to open a specific file.
+        /// 最终用户正常启动应用程序时调用。也会被其他入口点调用，如启动应用程序以打开特定文件时。
         /// </summary>
-        /// <param name="e">Details about the launch request and process.</param>
+        /// <param name="e">有关启动请求和流程的详细信息 .</param>
         protected override async void OnLaunched(LaunchActivatedEventArgs args)
         {
-#if DEBUG
-            //if (System.Diagnostics.Debugger.IsAttached)
-            //{
-            //    this.DebugSettings.EnableFrameRateCounter = true;
-            //}
-
-            if (System.Diagnostics.Debugger.IsAttached)
-            {
-                this.DebugSettings.BindingFailed += DebugSettings_BindingFailed;
-            }
-#endif
-            //draw into the title bar
+            //在标题栏中绘制
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;
-            
+
             await EnsureWindow(args);
         }
 
         private void DebugSettings_BindingFailed(object sender, BindingFailedEventArgs e)
         {
-            
+
         }
 
         protected async override void OnActivated(IActivatedEventArgs args)
@@ -127,10 +114,15 @@ namespace AppUIBasics
             base.OnActivated(args);
         }
 
+        /// <summary>
+        /// 启动窗体
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         private async Task EnsureWindow(IActivatedEventArgs args)
         {
-            // No matter what our destination is, we're going to need control data loaded - let's knock that out now.
-            // We'll never need to do this again.
+            // 无论要达成什么目的，我们都需要加载控件数据 - 让我们现在解决这个问题.
+            // 只运行一次就行了.
             await ControlInfoDataSource.Instance.GetGroupsAsync();
 
             Frame rootFrame = GetRootFrame();
@@ -262,13 +254,13 @@ namespace AppUIBasics
         }
 
         /// <summary>
-        /// Invoked when Navigation to a certain page fails
+        /// 当导航到某个页面失败时调用 
         /// </summary>
-        /// <param name="sender">The Frame which failed navigation</param>
-        /// <param name="e">Details about the navigation failure</param>
+        /// <param name="sender">导航失败的框架</param>
+        /// <param name="e">有关导航失败的详细信息</param>
         void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
-            throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
+            throw new Exception("加载" + e.SourcePageType.FullName + "页面失败");
         }
 
         /// <summary>
