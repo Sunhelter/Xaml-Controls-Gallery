@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Class="AppUIBasics.SamplePages.SamplePage3"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -31,7 +31,7 @@
             <Grid Grid.Row="2" Grid.Column="2" MinHeight="{StaticResource TileHeight}" Background="DarkGray" Margin="5" />
 
             <Grid Grid.Row="3" Grid.ColumnSpan="3" Margin="5">
-                <TextBlock TextWrapping="WrapWholeWords" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
+                <TextBlock TextWrapping="WrapWholeWords" Text="痛本身就是爱的痛，主要的生态问题，但我给这种倒下的时间，让一些很大的痛和痛。 为了在大多数情况下，我们中的任何人都会从事任何类型的工作，除了利用它的目标。 但电影中的痛苦是难以谴责的，在快乐中它想逃避被痛苦中的痛苦，没有结果。 他们是盲人渴望的例外，他们看不到，他们是那些为了抚慰心灵苦难而放弃责任的人。 " />
             </Grid>
         </Grid>
     </ScrollViewer>

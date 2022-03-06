@@ -177,7 +177,7 @@
           ]
         },
         {
-          "UniqueId": "命令栏",
+          "UniqueId": "CommandBar",
           "Title": "命令栏",
           "Subtitle": "A toolbar for displaying application-specific commands that handles layout and resizing of its contents.",
           "ImagePath": "ms-appx:///Assets/CommandBar.png",
@@ -1652,17 +1652,17 @@
             }
           ],
           "RelatedControls": [
-            "NavigationView",
+            "导航视图",
             "Pivot",
             "TabView"
           ]
         },
         {
           "UniqueId": "NavigationView",
-          "Title": "NavigationView",
-          "Subtitle": "Common vertical layout for top-level areas of your app via a collapsible navigation menu.",
+          "Title": "导航视图",
+          "Subtitle": "通过可折叠导航菜单对应用的顶级区域进行通用的垂直布局。",
           "ImagePath": "ms-appx:///Assets/NavigationView.png",
-          "Description": "The navigation view control provides a common vertical layout for top-level areas of your app via a collapsible navigation menu.",
+          "Description": "导航视图控件通过可折叠的导航菜单为应用的顶级区域提供通用的垂直布局。",
           "Content": "",
           "IsNew": true,
           "IsUpdated": false,
@@ -1731,7 +1731,7 @@
           ],
           "RelatedControls": [
             "Pivot",
-            "NavigationView",
+            "导航视图",
             "ListView"
           ]
         }

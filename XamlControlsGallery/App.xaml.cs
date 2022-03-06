@@ -93,7 +93,7 @@ namespace AppUIBasics
         /// <summary>
         /// 最终用户正常启动应用程序时调用。也会被其他入口点调用，如启动应用程序以打开特定文件时。
         /// </summary>
-        /// <param name="e">有关启动请求和流程的详细信息 .</param>
+        /// <param name="args">有关启动请求和流程的详细信息。</param>
         protected override async void OnLaunched(LaunchActivatedEventArgs args)
         {
             //在标题栏中绘制
